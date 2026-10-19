@@ -101,9 +101,9 @@ Through this project, I strengthened my understanding of:
 
 📬 Connect With Me
 
-- GitHub: "My GitHub Profile" (https://github.com/YOUR-USERNAME)
-- LinkedIn: "My LinkedIn Profile" (https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME/)
-- Email: your-email@example.com
+- GitHub: "My GitHub Profile" (https://github.com/akshayanm08-nan)
+- LinkedIn: "My LinkedIn Profile" (https://www.linkedin.com/in/Akshaya NM/)
+- Email: akshayanm08@gmail.com
 
 ---
 

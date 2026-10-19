@@ -1,0 +1,844 @@
+/* ========================================
+PERSONAL DEVELOPER PORTFOLIO
+Designed by Akshaya
+Technologies: HTML5 + CSS3
+======================================== */
+
+/* 1. CSS Variables */
+
+:root {
+--background: #080b16;
+--surface: #101527;
+--surface-light: #171d33;
+--primary: #a78bfa;
+--secondary: #67e8f9;
+--text: #f5f5ff;
+--muted: #a2a9c3;
+--border: rgba(255, 255, 255, 0.09);
+}
+
+/* 2. Reset & Global Styles */
+
+- {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+scroll-padding-top: 90px;
+}
+
+body {
+font-family: 'Poppins', sans-serif;
+background: var(--background);
+color: var(--text);
+line-height: 1.7;
+overflow-x: hidden;
+}
+
+a {
+color: inherit;
+text-decoration: none;
+}
+
+ul {
+list-style: none;
+}
+
+span {
+color: var(--primary);
+}
+
+.container {
+width: min(1120px, 90%);
+margin-inline: auto;
+}
+
+section {
+scroll-margin-top: 80px;
+}
+
+/* 3. Navigation Bar */
+
+header {
+position: sticky;
+top: 0;
+z-index: 100;
+background: rgba(8, 11, 22, 0.92);
+backdrop-filter: blur(18px);
+border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+min-height: 78px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 24px;
+}
+
+.logo {
+font-size: 2rem;
+font-weight: 800;
+letter-spacing: -2px;
+}
+
+.logo span {
+color: var(--secondary);
+}
+
+.nav-links {
+display: flex;
+align-items: center;
+gap: 30px;
+}
+
+.nav-links a {
+color: var(--muted);
+font-size: 0.88rem;
+transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+color: var(--secondary);
+}
+
+.nav-links .nav-button {
+color: var(--text);
+border: 1px solid var(--primary);
+padding: 10px 17px;
+border-radius: 9px;
+}
+
+/* 4. Buttons */
+
+.button {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+padding: 13px 21px;
+border-radius: 10px;
+font-size: 0.9rem;
+font-weight: 600;
+transition: transform 0.3s ease,
+box-shadow 0.3s ease;
+}
+
+.button:hover {
+transform: translateY(-3px);
+}
+
+.primary-button {
+background: linear-gradient(
+120deg,
+#a78bfa,
+#818cf8
+);
+color: #090b18;
+box-shadow: 0 8px 28px rgba(167, 139, 250, 0.18);
+}
+
+.primary-button:hover {
+box-shadow: 0 10px 35px rgba(167, 139, 250, 0.35);
+}
+
+.secondary-button {
+border: 1px solid var(--border);
+color: var(--text);
+}
+
+/* 5. Hero Section */
+
+.hero {
+min-height: 620px;
+display: grid;
+grid-template-columns: 1.1fr 0.9fr;
+align-items: center;
+gap: 50px;
+padding-top: 65px;
+padding-bottom: 75px;
+}
+
+.eyebrow {
+color: var(--secondary);
+font-size: 0.76rem;
+font-weight: 600;
+letter-spacing: 2px;
+margin-bottom: 15px;
+}
+
+.hero h1 {
+font-size: clamp(2.7rem, 6vw, 4.7rem);
+line-height: 1.18;
+letter-spacing: -2px;
+}
+
+.hero h1 span {
+background: linear-gradient(
+110deg,
+#a78bfa,
+#67e8f9
+);
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.hero h2 {
+color: #d7d9ed;
+font-size: clamp(1.2rem, 2.5vw, 1.65rem);
+font-weight: 500;
+margin-top: 14px;
+}
+
+.hero-description {
+color: var(--muted);
+max-width: 520px;
+margin-top: 22px;
+font-size: 0.97rem;
+}
+
+.hero-buttons {
+display: flex;
+flex-wrap: wrap;
+gap: 14px;
+margin-top: 30px;
+}
+
+.social-links {
+display: flex;
+gap: 24px;
+margin-top: 30px;
+}
+
+.social-links a {
+color: var(--muted);
+font-size: 0.9rem;
+transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+color: var(--secondary);
+}
+
+/* 6. Hero Visual */
+
+.hero-visual {
+min-height: 390px;
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.profile-card {
+position: relative;
+z-index: 2;
+width: min(310px, 85%);
+padding: 35px 24px;
+text-align: center;
+background: linear-gradient(
+145deg,
+#191e37,
+#0d1224
+);
+border: 1px solid rgba(167, 139, 250, 0.35);
+border-radius: 25px;
+box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
+}
+
+.profile-icon {
+width: 90px;
+height: 90px;
+display: grid;
+place-items: center;
+margin: 0 auto 22px;
+font-size: 2rem;
+font-weight: 700;
+color: var(--secondary);
+background: rgba(103, 232, 249, 0.08);
+border: 1px solid rgba(103, 232, 249, 0.35);
+border-radius: 25px;
+}
+
+.profile-label {
+font-size: 0.7rem;
+letter-spacing: 3px;
+color: var(--muted);
+}
+
+.profile-card h3 {
+font-size: 1.65rem;
+margin: 5px 0;
+}
+
+.profile-card > p:last-of-type {
+font-size: 0.85rem;
+color: var(--muted);
+}
+
+.profile-tags {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 8px;
+margin-top: 22px;
+}
+
+.profile-tags span,
+.project-tags span {
+color: var(--secondary);
+background: rgba(103, 232, 249, 0.07);
+border: 1px solid rgba(103, 232, 249, 0.15);
+padding: 5px 10px;
+border-radius: 7px;
+font-size: 0.72rem;
+}
+
+.orbit {
+position: absolute;
+border: 1px solid rgba(167, 139, 250, 0.15);
+border-radius: 50%;
+}
+
+.orbit-one {
+width: 340px;
+height: 340px;
+}
+
+.orbit-two {
+width: 410px;
+height: 410px;
+border-color: rgba(103, 232, 249, 0.1);
+}
+
+.floating-badge {
+position: absolute;
+z-index: 3;
+background: #191e37;
+border: 1px solid var(--border);
+border-radius: 10px;
+padding: 10px 14px;
+font-size: 0.75rem;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.badge-one {
+top: 55px;
+right: 0;
+}
+
+.badge-two {
+bottom: 45px;
+left: 0;
+}
+
+/* 7. Common Section Styles */
+
+.section {
+padding-top: 100px;
+padding-bottom: 40px;
+}
+
+.section-heading {
+text-align: center;
+margin-bottom: 45px;
+}
+
+.section-heading h2,
+.contact-card h2 {
+font-size: clamp(2rem, 4vw, 2.8rem);
+line-height: 1.3;
+letter-spacing: -1px;
+}
+
+.section-description {
+color: var(--muted);
+margin-top: 12px;
+font-size: 0.9rem;
+}
+
+/* 8. About Section */
+
+.about-card {
+display: grid;
+grid-template-columns: 75px 1fr;
+gap: 25px;
+padding: 38px;
+background: var(--surface);
+border: 1px solid var(--border);
+border-radius: 20px;
+}
+
+.about-number {
+font-size: 2rem;
+font-weight: 700;
+color: var(--primary);
+}
+
+.about-card h3 {
+font-size: 1.35rem;
+margin-bottom: 14px;
+}
+
+.about-card p {
+color: var(--muted);
+font-size: 0.92rem;
+margin-bottom: 12px;
+}
+
+/* 9. Skills Section */
+
+.skills-section,
+.certification-section {
+margin-top: 90px;
+padding-top: 90px;
+padding-bottom: 90px;
+background: linear-gradient(
+180deg,
+rgba(16, 21, 39, 0.15),
+rgba(16, 21, 39, 0.75),
+rgba(16, 21, 39, 0.15)
+);
+}
+
+.skills-grid {
+display: grid;
+grid-template-columns: repeat(4, minmax(0, 1fr));
+gap: 20px;
+}
+
+.skill-card {
+padding: 28px 20px;
+background: var(--surface);
+border: 1px solid var(--border);
+border-radius: 16px;
+transition: transform 0.3s ease,
+border-color 0.3s ease;
+}
+
+.skill-card:hover,
+.project-card:hover {
+transform: translateY(-6px);
+border-color: rgba(167, 139, 250, 0.55);
+}
+
+.skill-icon {
+font-size: 1.8rem;
+color: var(--secondary);
+margin-bottom: 18px;
+}
+
+.skill-card h3 {
+font-size: 1rem;
+margin-bottom: 10px;
+}
+
+.skill-card p {
+color: var(--muted);
+font-size: 0.8rem;
+}
+
+/* 10. Projects Section */
+
+.projects-grid {
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 24px;
+}
+
+.project-card {
+padding: 30px;
+display: flex;
+flex-direction: column;
+background: var(--surface);
+border: 1px solid var(--border);
+border-radius: 18px;
+transition: transform 0.3s ease,
+border-color 0.3s ease;
+}
+
+.project-top {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 12px;
+margin-bottom: 25px;
+}
+
+.project-icon {
+font-size: 1.8rem;
+color: var(--primary);
+}
+
+.project-category {
+color: var(--secondary);
+font-size: 0.65rem;
+letter-spacing: 1px;
+}
+
+.project-card h3 {
+font-size: 1.25rem;
+margin-bottom: 12px;
+}
+
+.project-card > p {
+color: var(--muted);
+font-size: 0.88rem;
+margin-bottom: 20px;
+}
+
+.project-tags {
+display: flex;
+flex-wrap: wrap;
+gap: 8px;
+margin-bottom: 25px;
+}
+
+.project-link {
+align-self: flex-start;
+margin-top: auto;
+color: var(--secondary);
+font-size: 0.88rem;
+font-weight: 600;
+}
+
+/* 11. Certifications & Achievements */
+
+.achievement-list {
+display: grid;
+gap: 15px;
+}
+
+.achievement-card {
+display: grid;
+grid-template-columns: 45px 1fr auto;
+align-items: center;
+gap: 18px;
+padding: 22px;
+background: var(--surface);
+border: 1px solid var(--border);
+border-radius: 14px;
+}
+
+.achievement-icon {
+width: 42px;
+height: 42px;
+display: grid;
+place-items: center;
+background: rgba(167, 139, 250, 0.1);
+color: var(--primary);
+border-radius: 12px;
+font-size: 1.4rem;
+}
+
+.achievement-card h3 {
+font-size: 0.98rem;
+}
+
+.achievement-card p {
+color: var(--muted);
+font-size: 0.8rem;
+}
+
+.achievement-status {
+color: var(--secondary);
+font-size: 0.65rem;
+letter-spacing: 1px;
+font-weight: 600;
+}
+
+/* 12. Contact Section */
+
+.contact-card {
+margin-top: 50px;
+margin-bottom: 50px;
+padding: 65px 25px;
+text-align: center;
+background:
+radial-gradient(
+ellipse at top,
+rgba(167, 139, 250, 0.13),
+transparent 65%
+),
+var(--surface);
+border: 1px solid var(--border);
+border-radius: 24px;
+}
+
+.contact-card h2 {
+margin-bottom: 18px;
+}
+
+.contact-card > p:not(.eyebrow) {
+max-width: 540px;
+margin: 0 auto 28px;
+color: var(--muted);
+font-size: 0.9rem;
+}
+
+.contact-socials {
+display: flex;
+justify-content: center;
+gap: 25px;
+margin-top: 25px;
+}
+
+.contact-socials a {
+color: var(--muted);
+font-size: 0.85rem;
+}
+
+.contact-socials a:hover {
+color: var(--secondary);
+}
+
+/* 13. Footer */
+
+footer {
+border-top: 1px solid var(--border);
+padding: 25px 0;
+}
+
+.footer-content {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 20px;
+}
+
+.footer-content p {
+color: var(--muted);
+font-size: 0.72rem;
+}
+
+/* 14. Tablet Responsive Design */
+
+@media (max-width: 900px) {
+
+.nav-links {
+    gap: 16px;
+}
+
+.hero {
+    gap: 25px;
+}
+
+.skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.orbit-two {
+    width: 330px;
+    height: 330px;
+}
+
+.orbit-one {
+    width: 280px;
+    height: 280px;
+}
+
+.floating-badge {
+    font-size: 0.65rem;
+}
+
+}
+
+/* 15. Mobile Responsive Design */
+
+@media (max-width: 600px) {
+
+.container {
+    width: 90%;
+}
+
+.navbar {
+    min-height: auto;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    align-items: flex-start;
+}
+
+.logo {
+    font-size: 1.7rem;
+}
+
+.nav-links {
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 10px 14px;
+    max-width: 85%;
+}
+
+.nav-links a {
+    font-size: 0.72rem;
+}
+
+.nav-links .nav-button {
+    padding: 5px 9px;
+}
+
+.hero {
+    grid-template-columns: 1fr;
+    padding-top: 65px;
+    padding-bottom: 50px;
+    gap: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(2.6rem, 12vw, 3.7rem);
+}
+
+.hero-description {
+    font-size: 0.88rem;
+}
+
+.hero-buttons {
+    gap: 10px;
+}
+
+.button {
+    padding: 12px 15px;
+    font-size: 0.78rem;
+}
+
+.hero-visual {
+    min-height: 360px;
+    margin-top: 15px;
+}
+
+.orbit-one {
+    width: 260px;
+    height: 260px;
+}
+
+.orbit-two {
+    width: 310px;
+    height: 310px;
+}
+
+.badge-one {
+    top: 25px;
+    right: 0;
+}
+
+.badge-two {
+    bottom: 25px;
+    left: 0;
+}
+
+.section {
+    padding-top: 65px;
+    padding-bottom: 20px;
+}
+
+.section-heading {
+    margin-bottom: 30px;
+}
+
+.about-card {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 25px;
+}
+
+.about-number {
+    font-size: 1.4rem;
+}
+
+.about-card h3 {
+    font-size: 1.15rem;
+}
+
+.about-card p {
+    font-size: 0.85rem;
+}
+
+.skills-section,
+.certification-section {
+    margin-top: 60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.skill-card {
+    padding: 20px 14px;
+}
+
+.skill-card h3 {
+    font-size: 0.88rem;
+}
+
+.skill-card p {
+    font-size: 0.74rem;
+}
+
+.projects-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.project-card {
+    padding: 23px;
+}
+
+.project-category {
+    font-size: 0.58rem;
+}
+
+.achievement-card {
+    grid-template-columns: 38px 1fr;
+    gap: 12px;
+    padding: 16px;
+}
+
+.achievement-icon {
+    width: 36px;
+    height: 36px;
+}
+
+.achievement-status {
+    grid-column: 2;
+}
+
+.contact-card {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    padding: 45px 18px;
+}
+
+.footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+}
+
+}
+
+/* 16. Accessibility */
+
+a:focus-visible {
+outline: 2px solid var(--secondary);
+outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+html {
+    scroll-behavior: auto;
+}
+
+*,
+*::before,
+*::after {
+    transition-duration: 0.01ms !important;
+}
+
+  }

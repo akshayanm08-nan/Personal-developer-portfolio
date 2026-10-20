@@ -6,7 +6,7 @@ Welcome to my personal developer portfolio! 👋
 
 I'm an Artificial Intelligence and Data Science student at V.S.B. Engineering College, passionate about technology, programming, and Artificial Intelligence. This portfolio showcases my technical skills, projects, certifications, and learning journey.
 
-🔗 Live Demo: "View My Portfolio" (https://YOUR-USERNAME.github.io/personal-developer-portfolio/)
+🔗 Live Demo: "View My Portfolio" (https://akshayanm08-nan.github.io/personal-developer-portfolio/)
 
 ---
 
